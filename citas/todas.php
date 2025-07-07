@@ -62,7 +62,7 @@ if (count($citas) === 0) {
         <form method="get" class="filtro-citas">
             <div class="controls">
                 <input type="text" name="buscar" placeholder="Buscar por paciente, médico o estado..." value="<?= htmlspecialchars($_GET['buscar'] ?? '') ?>">
-                <button type="submit">🔍</button>
+                <button type="submit">Buscar</button>
             </div>
         </form>
     </div>

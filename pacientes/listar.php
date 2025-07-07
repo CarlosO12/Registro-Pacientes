@@ -60,10 +60,8 @@ if ($cedula !== '') {
         $tipo_mensaje = 'error';
     }
 
-    // Evitar mostrar paginación si se está buscando
     $total_paginas = 0;
 } else {
-    // Mostrar todos con paginación
     $total_stmt = $conn->query("SELECT COUNT(*) FROM pacientes");
     $total = $total_stmt->fetchColumn();
     $total_paginas = ceil($total / $por_pagina);
@@ -104,7 +102,7 @@ if ($cedula !== '') {
     <div class="search-bar">
         <form method="get" action="listar.php">
             <input type="text" name="cedula" placeholder="Buscar por cédula..." value="<?= isset($_GET['cedula']) ? htmlspecialchars($_GET['cedula']) : '' ?>">
-            <button type="submit">🔍</button>
+            <button type="submit">Buscar</button>
         </form>
     </div>
 

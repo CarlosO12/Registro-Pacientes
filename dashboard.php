@@ -6,14 +6,14 @@
     <title>Dashboard - Sistema de Registro de Pacientes</title>
     <link rel="stylesheet" href="css/estilos.css">
     <style>
-        .card-container {
+        .tarjeta-contenedor {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
             margin-top: 30px;
         }
 
-        .card {
+        .tarjeta {
             background-color: #f4f4f4;
             padding: 20px;
             text-align: center;
@@ -22,11 +22,11 @@
             transition: background-color 0.4s ease;
         }
 
-        .card:hover {
+        .tarjeta:hover {
             background-color: rgb(227, 226, 226);
         }
 
-        .card a {
+        .tarjeta a {
             text-decoration: none;
             color: #1a73e8;
             font-weight: bold;
@@ -58,47 +58,47 @@
         <p><strong>Usuario:</strong> <?= htmlspecialchars($_SESSION['usuario']) ?></p>
         <p><strong>Rol:</strong> <?= ucfirst($_SESSION['rol']) ?></p>
     </div>
-    <h1>Bienvenido al Sistema de Registro de Pacientes</h1>
+    <h1>Panel Principal | Sistema de Registro de Pacientes</h1>
     <p>Seleccione una opción:</p>
 
-    <div class="card-container">
+    <div class="tarjeta-contenedor">
         <?php if (es_admin() || es_recepcionista() || es_medico()): ?>
-            <div class="card">
+            <div class="tarjeta">
                 <h3>Pacientes</h3>
                 <a href="pacientes/listar.php">Ver Pacientes</a>
             </div>
         <?php endif; ?>
 
         <?php if (es_admin() || es_medico()): ?>
-            <div class="card">
+            <div class="tarjeta">
                 <h3>Consultas</h3>
                 <a href="consultas/agregar.php">Registrar Consulta</a>
             </div>
         <?php endif; ?>
 
         <?php if (es_admin()): ?>
-            <div class="card">
+            <div class="tarjeta">
                 <h3>Usuarios</h3>
                 <a href="usuarios/listar.php">Gestionar Usuarios</a>
             </div>
         <?php endif; ?>
 
         <?php if (es_admin() || es_recepcionista() || es_medico()): ?>
-            <div class="card">
+            <div class="tarjeta">
                 <h3>Citas</h3>
                 <a href="citas/listar.php">Agendar Cita</a>
             </div>
         <?php endif; ?>
 
         <?php if (es_admin() || es_medico() || es_recepcionista()): ?>
-            <div class="card">
+            <div class="tarjeta">
                 <h3>Fichas Medicas</h3>
                 <a href="fichas_medicas/listar.php">Consultar Fichas</a>
             </div>
         <?php endif; ?>
 
         <?php if (es_admin() || es_recepcionista() || es_medico()): ?>
-            <div class="card">
+            <div class="tarjeta">
                 <h3>Cerrar sesion</h3>
                 <a href="logout.php">Cerrar</a>
             </div>

@@ -57,11 +57,13 @@ h2 {
 }
 
 .search-bar input {
+    width: 200px;
     flex: 1;
-    padding: 10px 20px;
+    padding: 10px 40px;
     border-radius: 8px 0 0 8px;
     border: 1px solid #ccc;
     border-right: none;
+    padding-left: 5px;
 }
 
 .search-bar input::placeholder{
@@ -69,6 +71,7 @@ h2 {
 }
 
 .search-bar button {
+    color: #231616;
     padding: 10px;
     border-radius: 0 8px 8px 0;
     background-color: #eee;

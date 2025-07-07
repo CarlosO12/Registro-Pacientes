@@ -5,7 +5,7 @@ include 'includes/conexion.php';
 
 $error = "";
 
-// Si ya está logueado, redirigir
+// Si ya está logueado, redirigir no se cierra la sesion
 if (isset($_SESSION['usuario'])) {
     header("Location: dashboard.php");
     exit;
@@ -15,7 +15,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $usuario = trim($_POST['usuario']);
     $clave = $_POST['clave'];
 
-    // Validar que los campos no estén vacíos
     if (empty($usuario) || empty($clave)) {
         $error = "Debes ingresar usuario y contraseña.";
     } else {
@@ -48,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
 
-    <div class="login-container">
+    <div class="login">
         <h2>Iniciar Sesión</h2>
 
         <?php if (!empty($error)): ?>
