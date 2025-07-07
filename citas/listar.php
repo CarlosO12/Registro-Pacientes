@@ -83,7 +83,7 @@ if (isset($_GET['mensaje'])) {
                     <td><?= $c['medico_asignado'] ?></td>
                     <td class="estado <?= $c['estado'] ?>"><?= $c['estado'] ?></td>
                     <td class="actions">
-                        <?php if ($_SESSION['rol'] === 'admin'): ?>
+                        <?php if ($_SESSION['rol'] === 'admin' || $_SESSION['rol'] === 'recepcionista'): ?>
                             <a href="editar.php?id=<?= $c['id'] ?>">Editar</a>
                         <?php endif; ?>
                     </td>

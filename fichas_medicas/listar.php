@@ -93,7 +93,7 @@ if (count($fichas) === 0) {
     <div class="search-bar">
         <form method="get" action="listar.php">
             <div class="controls">
-                <input type="text" name="paciente" placeholder="Buscar por nombre de paciente..." value="<?= htmlspecialchars($_GET['paciente'] ?? '') ?> ">
+                <input type="text" name="paciente" placeholder="Buscar por nombre de paciente..." value="<?= htmlspecialchars($_GET['paciente'] ?? '') ?>">
                 <button type="submit">🔍</button>
             </div>
         </form>

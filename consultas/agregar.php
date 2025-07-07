@@ -101,5 +101,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <button style="margin-top: 10px; border-radius: 10px;" type="submit">Guardar Consulta</button>
         <a href="../dashboard.php" class="btn-volver">← Volver</a>
     </form>
+
+    <script>
+        setTimeout(() => {
+            const mensaje = document.querySelector('.mensaje');
+            if (mensaje) mensaje.style.display = 'none';
+        }, 3000);
+    </script>
 </body>
 </html>
