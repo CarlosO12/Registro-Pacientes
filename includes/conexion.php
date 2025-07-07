@@ -4,7 +4,7 @@ date_default_timezone_set("America/Bogota");
 $host = 'localhost';
 $db   = 'registro_pacientes';
 $user = 'root';
-$pass = 'carlos12';
+$pass = '';
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
